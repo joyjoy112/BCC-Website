@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #165DFF;
+    --secondary-color: #FF7D00;
+    --dark-color: #1E293B;
+    --light-color: #F8FAFC;
+    --gray-color: #64748B;
+    --white: #FFFFFF;
+}
+
+body {
+    color: var(--dark-color);
+    line-height: 1.7;
+    background-color: var(--light-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo-name h1 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.logo-name span {
+    font-size: 0.75rem;
+    color: var(--gray-color);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--dark-color);
+    transition: 0.3s;
+}
+
+/* ===== HERO ===== */
+.hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #E6F0FF 0%, #F0F9FF 100%);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-text h2 {
+    font-size: 2.6rem;
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: var(--gray-color);
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.primary-btn:hover {
+    background-color: #0F48C0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(22, 93, 255, 0.2);
+}
+
+.outline-btn {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.outline-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.hero-img img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* ===== SECTION HEADING ===== */
+.section-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-heading h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-heading p {
+    color: var(--gray-color);
+    font-size: 1.05rem;
+}
+
+/* ===== ABOUT ===== */
+.about {
+    padding: 4rem 0;
+    background: var(--white);
+}
+
+.about-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.about-card {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.about-card i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.about-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+/* ===== PROGRAMS ===== */
+.programs {
+    padding: 4rem 0;
+    background: var(--light-color);
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.program-item {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+    transition: 0.3s;
+}
+
+.program-item:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.program-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(22, 93, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:
